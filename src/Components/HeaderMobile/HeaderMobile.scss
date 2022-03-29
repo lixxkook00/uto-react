@@ -1,0 +1,36 @@
+@import '../../../public/scss/variables';
+
+.header-mobile{
+    z-index: 2;
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 58px;
+    margin-bottom: 4px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+
+    
+    & .logo{
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    & .logo img{
+        height: 36px;
+    }
+
+    & .icon{
+        font-size: 30px;
+        display: flex;
+    }
+
+    & .icon i{
+        margin: auto;
+        color: $primary-blue;
+    }
+}

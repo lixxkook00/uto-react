@@ -1,0 +1,157 @@
+{
+    "product":[
+        {
+            "ID" : "01",
+            "Name" : "Serum gội bồ kết cô đặc cho mái tóc đen óng ả Milaganics 250ml",
+            "img":"product-image.png",
+            "currentPrice" : 5004083,
+            "retailPrice":199000,
+            "startRating":4.5,
+            "location": "TP.Hồ Chí Minh"
+        },
+        {
+            "ID" : "02",
+            "Name" : "Đồ bộ ngủ pijama nữ",
+            "img":"product-1.png",
+            "currentPrice" : 165000,
+            "retailPrice":310000,
+            "startRating":0,
+            "location": "TP.Hồ Chí Minh"
+        },
+        {
+            "ID" : "03",
+            "Name" : "Đồ bộ ngủ pijama nữ",
+            "img":"product-2.png",
+            "currentPrice" : 165000,
+            "retailPrice":310000,
+            "startRating":0,
+            "location": "TP.Hồ Chí Minh"
+        },
+        {
+            "ID" : "04",
+            "Name" : "Đồ bộ ngủ pijama nữ",
+            "img":"product-3.png",
+            "currentPrice" : 165000,
+            "retailPrice":310000,
+            "startRating":0,
+            "location": "TP.Hồ Chí Minh"
+        },
+        {
+            "ID" : "05",
+            "Name" : "Đồ bộ ngủ pijama nữ",
+            "img":"product-4.png",
+            "currentPrice" : 165000,
+            "retailPrice":310000,
+            "startRating":0,
+            "location": "TP.Hồ Chí Minh"
+        },
+        {
+            "ID" : "06",
+            "Name" : "Đồ bộ ngủ pijama nữ",
+            "img":"product-5.png",
+            "currentPrice" : 165000,
+            "retailPrice":310000,
+            "startRating":0,
+            "location": "TP.Hồ Chí Minh"
+        }
+    ]
+    ,
+    "edu_category": [
+        {
+            "id": "01",
+            "name":"Đào tạo nội bộ UTO",
+            "link":"",
+            "icon":"uto edu icon image.png"
+        },
+        {
+            "id": "02",
+            "name":"Kho liệu trình UTO",
+            "link":"",
+            "icon":"uto edu icon image (1).png"
+        },
+        {
+            "id": "03",
+            "name":"Thư viện video",
+            "link":"",
+            "icon":"uto edu icon image (2).png"
+        },
+        {
+            "id": "04",
+            "name":"Thư viện hình ảnh",
+            "link":"",
+            "icon":"uto edu icon image (3).png"
+        },
+        {
+            "id": "05",
+            "name":"Các khóa học chuyên sâu",
+            "link":"",
+            "icon":"uto edu icon image (4).png"
+        },
+        {
+            "id": "06",
+            "name":"Kết nối chuyên gia",
+            "link":"",
+            "icon":"uto edu icon image (5).png"
+        }
+    ],
+    "edu_youtubeLink": [
+        {
+            "id": "01",
+            "link":"https://www.youtube.com/watch?v=RUN4STgv5rU"
+        },
+        {
+            "id": "02",
+            "link":"https://www.youtube.com/watch?v=NmNKuBqrGEY"
+        },
+        {
+            "id": "03",
+            "link":"https://www.youtube.com/watch?v=qPOv4XnuRys"
+        },
+        {
+            "id": "04",
+            "link":"https://www.youtube.com/watch?v=Nh_FNQ66wz8"
+        },
+        {
+            "id": "05",
+            "link":"https://www.youtube.com/watch?v=cnmHXM-4AgA"
+        }
+    ],
+    "edu_courses": [
+        {
+            "id": "01",
+            "name":"NHẬT KÝ 21 NGÀY THÀNH CÔNG TÔI VÀ KEN",
+            "img":"NHẬT KÝ 21 NGÀY THÀNH CÔNG TÔI VÀ KEN.jpg",
+            "link":"",
+            "teacher":"Ken Bay",
+            "salePrice":3000000,
+            "retailPrice":0
+        },
+        {
+            "id": "02",
+            "name":"GIÁO VIÊN MẦM NON HÀNH TRÌNH CHUYỂN ĐỔI HẠNH PHÚC",
+            "img":"GIÁO VIÊN MẦM NON HÀNH TRÌNH CHUYỂN ĐỔI HẠNH.jpg",
+            "link":"",
+            "teacher":"Nhóm chuyên gia GD Giáo Viên Mầm Non",
+            "salePrice":500000,
+            "retailPrice":3000000
+        },
+        {
+            "id": "03",
+            "name":"KỸ NĂNG COACHING CHO THẦY CÔ VÀ CHA MẸ",
+            "img":"KỸ NĂNG COACHING CHO THẦY CÔ VÀ CHA MẸ.jpg",
+            "link":"",
+            "teacher":"TIẾN SĨ KHIÊM NGUYỄN",
+            "salePrice":3000000,
+            "retailPrice":10000000
+        },
+        {
+            "id": "04",
+            "name":"GIÁO DỤC STEAM ỨNG DỤNG TRONG TRƯỜNG MẦM NON",
+            "img":"GIÁO DỤC STEAM ỨNG DỤNG TRONG TRƯỜNG MẦM NON.jpg",
+            "link":"",
+            "teacher":"Giảng viên Lê Bích Hồng",
+            "salePrice":1000000,
+            "retailPrice":3000000
+        }
+    ]
+}
