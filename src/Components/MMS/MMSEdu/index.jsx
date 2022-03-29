@@ -8,14 +8,14 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectFade, Navigation, Pagination,Autoplay } from "swiper";
 
 // data
-import myData from '../../data/data.json';
+import myData from '../../../data/data.json';
 
 
 // YoutubeEmbed
-import YoutubeEmbed from '../YoutubeEmbed'
+import YoutubeEmbed from '../../YoutubeEmbed'
 
 // Cart Edu
-import CartEdu from '../CartEdu'
+import CartEdu from '../../CartEdu'
 
 function getId(url) {
     const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;

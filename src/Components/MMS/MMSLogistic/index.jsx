@@ -7,11 +7,11 @@ import TabPanel from '@mui/lab/TabPanel';
 import './MMSLogistic.scss'
 
 // Logistic section
-import LogisticIntro from '../LogisticIntro'
-import LogisticRule from '../LogisticRule'
-import LogisticTalk from '../LogisticTalk'
-import LogisticComplaint from '../LogisticComplaint'
-import LogisticShip from '../LogisticShip'
+import LogisticIntro from '../../Logistis/LogisticIntro'
+import LogisticRule from '../../Logistis/LogisticRule'
+import LogisticTalk from '../../Logistis/LogisticTalk'
+import LogisticComplaint from '../../Logistis/LogisticComplaint'
+import LogisticShip from '../../Logistis/LogisticShip'
 
 function MMSLogistic(props) {
     const [value, setValue] = useState('1');

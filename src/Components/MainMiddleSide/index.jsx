@@ -1,10 +1,10 @@
 import React from 'react';
 import './MainMiddleSide.scss'
-import MMSCommunity from '../MMSCommunity'
-import MMSLogistic from '../MMSLogistic'
-import MMSTech from '../MMSTech'
-import MMSEdu from '../MMSEdu'
-import MMSMarket from '../MMSMarket'
+import MMSCommunity from '../MMS/MMSCommunity'
+import MMSLogistic from '../MMS/MMSLogistic'
+import MMSTech from '../MMS/MMSTech'
+import MMSEdu from '../MMS/MMSEdu'
+import MMSMarket from '../MMS/MMSMarket'
 
 
 // Footer

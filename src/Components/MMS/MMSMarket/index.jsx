@@ -15,10 +15,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectFade, Navigation, Pagination,Autoplay } from "swiper";
 
 // data
-import myData from '../../data/data.json';
+import myData from '../../../data/data.json';
 
 // cart item
-import CartMarket from '../CartMarket'
+import CartMarket from '../../CartMarket'
 
 const sellers = [
   {
