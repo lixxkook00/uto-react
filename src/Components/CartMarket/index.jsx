@@ -1,6 +1,8 @@
 import React from 'react';
 import './CartMarket.scss'
 
+import {Link} from 'react-router-dom'
+
 // rating MUI
 import Rating from '@mui/material/Rating';
 import Stack from '@mui/material/Stack';
@@ -52,13 +54,13 @@ const formatPrice = (price) => {
 };
 
 const calcPercentDiscount = (currentPrice,retailPriceice) => {
-    return Math.floor((currentPrice/retailPriceice)*100)
+    return 100-Math.floor((currentPrice/retailPriceice)*100)
 }
 
 function CartItem({product}) {
     // console.log(product);
     return (
-        <div key={product.ID} className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-4">
+        <Link to={`/market/${product.ID}`} key={product.ID} className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-4">
                   
             <a href="#" className="market-product-item box-shadow">
                 {/* item img */}
@@ -84,7 +86,7 @@ function CartItem({product}) {
                     </div>
                     <span className="text-underline">đ</span>
                     <div className="percent">
-                        {calcPercentDiscount(product.currentPrice,product.retailPrice)}%
+                        -{calcPercentDiscount(product.currentPrice,product.retailPrice)}%
                     </div> 
                     </div>
                 </div>
@@ -102,7 +104,7 @@ function CartItem({product}) {
                     </div>
                 </div>
             </a>
-        </div>
+        </Link>
     );
 }
 

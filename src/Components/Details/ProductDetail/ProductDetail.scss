@@ -1,0 +1,99 @@
+@import "../../../../public/scss/variables";
+
+.product {
+  padding: 10px;
+  &-img {
+    height: 400px;
+    display: flex;
+    & img {
+      margin: auto;
+      height: 100%;
+    }
+  }
+
+  &-infor {
+    padding: 10px;
+    &-name {
+      font-size: 20px;
+    }
+    &-vote {
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      &-item {
+        display: flex;
+        padding: 0 20px 0 10px;
+        border-right: 2px solid #ccc;
+      }
+      &-item:first-child {
+        padding-left: 0;
+      }
+      &-item:last-child {
+        border-right: none;
+      }
+
+      &-item .css-ryrseu-MuiRating-root {
+        font-size: 17px;
+        margin-left: 8px;
+      }
+    }
+    &-price {
+      margin: 20px 0;
+      font-size: 14px;
+      &-current {
+        font-size: 20px;
+        font-weight: 500;
+        color: #b53d3c;
+      }
+      &-retail {
+        text-decoration: line-through;
+      }
+    }
+    &-quantity {
+      display: flex;
+      align-items: center;
+      font-size: 15px;
+      margin: 0 0 30px;
+      &-control {
+        display: flex;
+        margin: 0 20px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        overflow: hidden;
+        & > div {
+          padding: 10px 14px;
+          background-color: #f5f7fa;
+        }
+        & input {
+          border: none;
+          outline: none;
+          width: 70px;
+          padding: 4px 8px !important;
+          text-align: center;
+        }
+        .control-value {
+          border-left: 1px solid #ccc;
+          border-right: 1px solid #ccc;
+          padding: 10px 30px;
+          background-color: #fff;
+        }
+        .control-btn:hover {
+          cursor: pointer;
+          background-color: $primary-blue;
+          color: #fff;
+          transition: all 0.5s ease;
+        }
+        .control-btn.disable {
+          cursor: unset !important;
+          opacity: 0.1;
+        }
+        .control-btn.disable:hover {
+          background-color: #ccc;
+        }
+      }
+    }
+    &-button {
+      display: flex;
+    }
+  }
+}

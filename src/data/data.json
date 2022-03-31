@@ -4,10 +4,11 @@
             "ID" : "01",
             "Name" : "Serum gội bồ kết cô đặc cho mái tóc đen óng ả Milaganics 250ml",
             "img":"product-image.png",
-            "currentPrice" : 5004083,
+            "currentPrice" : 55000,
             "retailPrice":199000,
             "startRating":4.5,
-            "location": "TP.Hồ Chí Minh"
+            "location": "TP.Hồ Chí Minh",
+            "available":99
         },
         {
             "ID" : "02",
@@ -15,8 +16,9 @@
             "img":"product-1.png",
             "currentPrice" : 165000,
             "retailPrice":310000,
-            "startRating":0,
-            "location": "TP.Hồ Chí Minh"
+            "startRating":4,
+            "location": "TP.Hồ Chí Minh",
+            "available":99
         },
         {
             "ID" : "03",
@@ -24,8 +26,9 @@
             "img":"product-2.png",
             "currentPrice" : 165000,
             "retailPrice":310000,
-            "startRating":0,
-            "location": "TP.Hồ Chí Minh"
+            "startRating":2,
+            "location": "TP.Hồ Chí Minh",
+            "available":99
         },
         {
             "ID" : "04",
@@ -33,8 +36,9 @@
             "img":"product-3.png",
             "currentPrice" : 165000,
             "retailPrice":310000,
-            "startRating":0,
-            "location": "TP.Hồ Chí Minh"
+            "startRating":4,
+            "location": "TP.Hồ Chí Minh",
+            "available":99
         },
         {
             "ID" : "05",
@@ -42,8 +46,9 @@
             "img":"product-4.png",
             "currentPrice" : 165000,
             "retailPrice":310000,
-            "startRating":0,
-            "location": "TP.Hồ Chí Minh"
+            "startRating":3.5,
+            "location": "TP.Hồ Chí Minh",
+            "available":99
         },
         {
             "ID" : "06",
@@ -51,8 +56,9 @@
             "img":"product-5.png",
             "currentPrice" : 165000,
             "retailPrice":310000,
-            "startRating":0,
-            "location": "TP.Hồ Chí Minh"
+            "startRating":1,
+            "location": "TP.Hồ Chí Minh",
+            "available":99
         }
     ]
     ,

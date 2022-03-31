@@ -6,14 +6,14 @@ import MainLeftSide from './Components/MainLeftSide'
 import MainMiddleSide from './Components/MainMiddleSide'
 import MainRightSide from './Components/MainRightSide'
 
-
+import {BrowserRouter as Router} from 'react-router-dom'
 
 function App() {
   // title list name
   const titleList = ["Cộng đồng doanh nghiệp UTO","Sàn công nghệ UTO","Sàn thương mại UTO","UTO Logistic","Các khoá học và đào tạo của UTO"]
 
   // select section on main middle side
-  const [sectionIndex,setSectionIndex] = useState(4);
+  const [sectionIndex,setSectionIndex] = useState(2);
 
   const handleSelectSection = (index) => {
     setSectionIndex(index);
@@ -25,7 +25,8 @@ function App() {
   },[sectionIndex])
 
   return (
-    <div className="App">
+    <Router>
+      <div className="App">
         <Header 
           handleSelectSection={handleSelectSection}
           sectionIndex={sectionIndex}
@@ -38,8 +39,8 @@ function App() {
           <MainMiddleSide indexSelected={sectionIndex}/>
           <MainRightSide/>
         </div>
-
-    </div>
+      </div>
+    </Router>
   );
 }
 

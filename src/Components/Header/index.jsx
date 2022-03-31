@@ -4,6 +4,7 @@ import Modal from '@mui/material/Modal';
 import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
+import {Link} from 'react-router-dom'
 
 import {useState} from 'react';
 import './Header.scss'
@@ -22,27 +23,27 @@ const style = {
 
 const mainContentList = [
     {
-        id:0,
+        id:"community",
         icon:"fas fa-users",
         name:"Cộng đồng",
     },
     {
-        id:1,
+        id:"tech",
         icon:"fab fa-gg-circle",
         name:"Sàn công nghệ",
     },
     {
-        id:2,
+        id:"",
         icon:"fa fa-cart-plus",
         name:"Sàn thương mại",
     },
     {
-        id:3,
+        id:"logistic",
         icon:"fa fa-ship",
         name:"Logistics",
     },
     {
-        id:4,
+        id:"edu",
         icon:"fa fa-graduation-cap",
         name:"Đào tạo",
     },
@@ -115,13 +116,13 @@ function Header({handleSelectSection,sectionIndex}) {
                 {
                     mainContentList.map((item,index) =>{
                         return (
-                            <a key={item.id} href onClick={() => {
+                            <Link to={`/${item.id}`} key={index} href onClick={() => {
                                 handleActiveMainContent(index);
                                 // handleSelectSection(index);
                                 }} className={`header-main-item ${index===sectionIndex ? 'active' : ''}`}>
                                 <i className={item.icon}></i>
                                 <div className="header-main-name">{item.name}</div>
-                            </a>
+                            </Link>
                         );
                     })
                 }

@@ -5,7 +5,7 @@ import './CartEdu.scss'
 
 function CartEdu({course}) {
     return (
-        <div className="col-xl-6">
+        <div key={course.id} className="col-xl-6">
             <div className="course-item">
                 <div className="course-item-img">
                     <img src={`./img/${course.img}`} alt="" />
