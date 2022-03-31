@@ -9,7 +9,7 @@ import MMSTech from '../MMS/MMSTech'
 import MMSEdu from '../MMS/MMSEdu'
 import MMSMarket from '../MMS/MMSMarket'
 import ProductDetail from '../Details/ProductDetail'
-
+// import ScrollToTop from '../ScrollToTop'
 
 // Footer
 import Footer from '../Footer'
@@ -21,22 +21,22 @@ function MainMiddleSide({indexSelected}) {
     return (
         <div className="main-content">
             <Switch>
-                <Route exact path="/community">
+                <Route path="/community">
                     < MMSCommunity/>
                 </Route>
             </Switch>
             <Switch>
-                <Route exact path="/tech">
+                <Route path="/tech">
                     < MMSTech/>
                 </Route>
             </Switch>
             <Switch>
-                <Route exact path="/logistic">
+                <Route path="/logistic">
                     < MMSLogistic/>
                 </Route>
             </Switch>
             <Switch>
-                <Route exact path="/edu">
+                <Route path="/edu">
                     < MMSEdu/>
                 </Route>
             </Switch>
@@ -49,7 +49,7 @@ function MainMiddleSide({indexSelected}) {
             <Switch>
                 <Route path="/market/:_id" component={ProductDetail} />
             </Switch>
-
+            
             <Footer/>
         </div>
     );

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState,useEffect} from 'react';
 import './ProductDetail.scss'
 
 // rating MUI
@@ -59,6 +59,8 @@ const calcPercentDiscount = (currentPrice,retailPriceice) => {
 
 
 
+
+
 function ProductDetail(props) {
     let {_id} = props.match.params
     const currentProduct = myData.product.find(product => product.ID === _id)
@@ -102,7 +104,7 @@ function ProductDetail(props) {
                                 0 đánh giá
                             </div>
                             <div className="product-infor-vote-item">
-                                0 đã bán
+                                {currentProduct.sold}  đã bán
                             </div>
                         </div>
                         {/* price */}
@@ -128,7 +130,15 @@ function ProductDetail(props) {
                                 <div onClick={() => increase()} className=" control-btn control-increase">
                                     <i className="fa-solid fa-plus"></i>
                                 </div>
-                                <input type="text" pattern="[0-9]*" className="control-value" value={totalQuantity}/>
+
+                                <input 
+                                    type="text" 
+                                    pattern="[0-9]*" 
+                                    className="control-value" 
+                                    value={totalQuantity} 
+                                    onChange={(e) => setTotalQuantity(parseInt(e.target.value))}
+                                />
+
                                 <div onClick={() => decrease()} className={`control-btn control-decrease ${totalQuantity===0 && "disable"}`}>
                                     <i className="fa-solid fa-minus"></i>
                                 </div>
@@ -137,6 +147,8 @@ function ProductDetail(props) {
                                 {currentProduct.available}  sản phẩm có sẵn
                             </div>
                         </div>
+                        {/* <p class="text-danger">Vượt quá số lượng sản phẩm còn lại</p> */}
+                        { totalQuantity - parseInt(currentProduct.available) > 0 && <p className="text-danger">Vượt quá số lượng sản phẩm còn lại</p> }
                         {/* buttons */}
                         <div className="product-infor-button">
                             <div className="product-infor-button-addtocart second-button">
@@ -146,6 +158,34 @@ function ProductDetail(props) {
                             <div className="product-infor-button-buynow primary-button">
                                 Mua ngay
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* infor shop */}
+            <div className="post">
+                <div className="shop">
+                    <div className="shop-avt">
+                        <img src="./img/516D546A6B7A7239524E57524B6D554B425A78345938536D4B446B41347344737A653857697950484A7353333876.png" alt="" />
+                    </div>
+
+                    <div className="shop-infor">
+                        <div className="shop-infor-name">
+                            Hàng Mỹ Xách Tay
+                        </div>
+                        <div className="shop-infor-owner">
+                            <p>Quản lý bởi</p>
+                            <a href="">
+                                Kimmizin
+                            </a>
+                        </div>
+                        <div className="shop-infor-location">
+                            <p>Địa chỉ </p>
+                            <p>Khu Nam Viên, Khu Biệt Thự Phú Mỹ Hưng Thành phố Hồ Chí Minh</p>
+                        </div>
+                        <div className="primary-button shop-btn">
+                            <i className="fa-solid fa-shop"></i> Xem Shop
                         </div>
                     </div>
                 </div>

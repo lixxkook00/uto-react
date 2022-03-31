@@ -8,7 +8,8 @@
             "retailPrice":199000,
             "startRating":4.5,
             "location": "TP.Hồ Chí Minh",
-            "available":99
+            "available":10,
+            "sold":23
         },
         {
             "ID" : "02",
@@ -18,7 +19,8 @@
             "retailPrice":310000,
             "startRating":4,
             "location": "TP.Hồ Chí Minh",
-            "available":99
+            "available":10,
+            "sold":23
         },
         {
             "ID" : "03",
@@ -28,7 +30,8 @@
             "retailPrice":310000,
             "startRating":2,
             "location": "TP.Hồ Chí Minh",
-            "available":99
+            "available":10,
+            "sold":23
         },
         {
             "ID" : "04",
@@ -38,7 +41,8 @@
             "retailPrice":310000,
             "startRating":4,
             "location": "TP.Hồ Chí Minh",
-            "available":99
+            "available":10,
+            "sold":23
         },
         {
             "ID" : "05",
@@ -48,7 +52,8 @@
             "retailPrice":310000,
             "startRating":3.5,
             "location": "TP.Hồ Chí Minh",
-            "available":99
+            "available":10,
+            "sold":23
         },
         {
             "ID" : "06",
@@ -58,7 +63,8 @@
             "retailPrice":310000,
             "startRating":1,
             "location": "TP.Hồ Chí Minh",
-            "available":99
+            "available":10,
+            "sold":23
         }
     ]
     ,

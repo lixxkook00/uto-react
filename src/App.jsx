@@ -6,6 +6,8 @@ import MainLeftSide from './Components/MainLeftSide'
 import MainMiddleSide from './Components/MainMiddleSide'
 import MainRightSide from './Components/MainRightSide'
 
+import ScrollToTop from './Components/ScrollToTop'
+
 import {BrowserRouter as Router} from 'react-router-dom'
 
 function App() {
@@ -26,20 +28,22 @@ function App() {
 
   return (
     <Router>
-      <div className="App">
-        <Header 
-          handleSelectSection={handleSelectSection}
-          sectionIndex={sectionIndex}
-        />
+     <ScrollToTop/>
+    <div className="App">
+      <Header 
+        handleSelectSection={handleSelectSection}
+        sectionIndex={sectionIndex}
+      />
 
-        <HeaderMobile />
+      <HeaderMobile />
 
-        <div className="container-uto mt-10">
-          <MainLeftSide/>
-          <MainMiddleSide indexSelected={sectionIndex}/>
-          <MainRightSide/>
-        </div>
+      <div className="container-uto mt-10">
+        <MainLeftSide/>
+        <MainMiddleSide indexSelected={sectionIndex}/>
+        <MainRightSide/>
       </div>
+    </div>
+     {/* </ScrollToTop> */}
     </Router>
   );
 }

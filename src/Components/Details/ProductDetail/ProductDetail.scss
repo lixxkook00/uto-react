@@ -13,6 +13,9 @@
 
   &-infor {
     padding: 10px;
+    p {
+      font-size: 12px;
+    }
     &-name {
       font-size: 20px;
     }
@@ -53,7 +56,8 @@
       display: flex;
       align-items: center;
       font-size: 15px;
-      margin: 0 0 30px;
+      margin: 0 0 20px;
+
       &-control {
         display: flex;
         margin: 0 20px;
@@ -95,5 +99,66 @@
     &-button {
       display: flex;
     }
+  }
+}
+
+.shop {
+  display: flex;
+  align-items: center;
+  padding: 0px 10px;
+  &-avt {
+    position: relative;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    // overflow: hidden;
+    &::after {
+      content: "";
+      top: -5px;
+      left: -5px;
+      border-radius: 50%;
+      position: absolute;
+      width: calc(100% + 10px);
+      height: calc(100% + 10px);
+      border: 3px solid $primary-blue;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 50%;
+    }
+  }
+  &-infor {
+    padding: 4px 10px 4px 20px;
+    font-size: 14px;
+    width: 500px;
+    line-height: 20px;
+    & > div {
+      display: flex;
+    }
+    &-name {
+      font-weight: 500;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    p {
+      display: block;
+      font-weight: 500;
+      color: gray;
+      margin: 4px 4px 4px 0;
+      min-width: 90px;
+    }
+    a {
+      font-size: 16px;
+      transform: translateY(3px);
+    }
+  }
+  .shop-btn {
+    margin: 10px 0;
+    width: 200px;
+  }
+
+  .shop-btn i {
+    margin-right: 6px;
   }
 }
