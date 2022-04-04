@@ -6,7 +6,6 @@ import MainLeftSide from './Components/MainLeftSide'
 import MainMiddleSide from './Components/MainMiddleSide'
 import MainRightSide from './Components/MainRightSide'
 
-import ScrollToTop from './Components/ScrollToTop'
 
 import {BrowserRouter as Router} from 'react-router-dom'
 
@@ -17,33 +16,39 @@ function App() {
   // select section on main middle side
   const [sectionIndex,setSectionIndex] = useState(2);
 
+  // pathname
+  const [pathname,setPathname] = useState(window.location.pathname)
+
   const handleSelectSection = (index) => {
     setSectionIndex(index);
   }
 
-  // change title website
-  useEffect(() => {
-    document.title = titleList[sectionIndex];
-  },[sectionIndex])
 
+  useEffect(() => {
+    setPathname(window.location.pathname)
+    console.log(pathname)
+  },[window.location.pathname])
+
+
+  useEffect(() => {
+    console.log("check"+pathname)
+  })
   return (
     <Router>
-     <ScrollToTop/>
-    <div className="App">
-      <Header 
-        handleSelectSection={handleSelectSection}
-        sectionIndex={sectionIndex}
-      />
-
-      <HeaderMobile />
-
-      <div className="container-uto mt-10">
-        <MainLeftSide/>
-        <MainMiddleSide indexSelected={sectionIndex}/>
-        <MainRightSide/>
+     {/* <ScrollToTop/> */}
+      <div className="App">
+        <Header 
+          handleSelectSection={handleSelectSection}
+          sectionIndex={sectionIndex}
+        />
+        <HeaderMobile />
+        <div className="container-uto mt-10">
+          <MainLeftSide/>
+          <MainMiddleSide indexSelected={sectionIndex}/>
+          <MainRightSide/>
+        </div>
       </div>
-    </div>
-     {/* </ScrollToTop> */}
+
     </Router>
   );
 }

@@ -11,7 +11,7 @@ function CartEdu({course}) {
                     <img src={`./img/${course.img}`} alt="" />
                 </div>
                 <div className="course-item-infor">
-                    <a href={course.link} className="course-item-name">
+                    <a href={course.link.toString()} className="course-item-name">
                         {course.name}
                     </a>
                     <div className="course-item-teacher">

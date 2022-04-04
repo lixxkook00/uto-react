@@ -81,7 +81,7 @@ function MMSCommunity(props) {
                         {/* POST Content */}
                         <div className="post-content">
                             <div className="post-content-product-name">
-                                <a href>
+                                <a href="">
                                     {item.productName}
                                 </a>
                             </div>
@@ -91,7 +91,7 @@ function MMSCommunity(props) {
 
                             {/* main img */}
                             <div className="post-content-img">
-                                <a href>
+                                <a href="">
                                     <img src={`./img/${item.postImg}`} alt="" />
                                 </a>
                             </div>

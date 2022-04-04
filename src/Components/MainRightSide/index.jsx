@@ -87,10 +87,10 @@ function MainRightSide(props) {
 
                 {/* Download Icon */}
                 <div className="download">
-                    <a href className="download-item">
+                    <a href="" className="download-item">
                         <img src="./img/application icon.png" alt="" />
                     </a>
-                    <a href className="download-item">
+                    <a href="" className="download-item">
                         <img src="./img/application icon (1).png" alt="" />
                     </a>
                 </div>

@@ -65,7 +65,7 @@ function MMSEdu(props) {
                         {
                             categoryList.map((category,index) => {
                                 return (
-                                    <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+                                    <div key={index} className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
                                         <a href= {category.link} className="edu-category-item">
                                             <div className="edu-category-item_text">
                                                 {category.name}
@@ -102,7 +102,7 @@ function MMSEdu(props) {
                     {
                         youtubeList.map((item,index) => {
                             return (
-                                <SwiperSlide >
+                                <SwiperSlide key={index}>
                                     <a href="" className="seller-slider-cart box-show-uto">
                                         <YoutubeEmbed embedId={getId(item.link)} />
                                     </a>
@@ -127,7 +127,7 @@ function MMSEdu(props) {
                             {
                                 courseList.map((course,index) => {
                                     return (
-                                        <CartEdu course={course}/>
+                                        <CartEdu course={course} key={index}/>
                                     )
                                 })
                             }
@@ -151,17 +151,16 @@ function MMSEdu(props) {
                             {
                                 courseList.map((course,index) => {
                                     return (
-                                        <CartEdu course={course}/>
+                                        <CartEdu course={course} key={index}/>
                                     )
                                 })
                             }
-                            
                         </div>
                     </div>
                 </div>
             </div>
 
-            {/* all courses */}
+            {/* feature */}
             <div className="post">
                 <div className="feature-courses">
                     {/* title */}

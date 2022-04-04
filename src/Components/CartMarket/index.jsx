@@ -62,7 +62,7 @@ function CartItem({product}) {
     return (
         <Link to={`/market/${product.ID}`} key={product.ID} className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-4">
                   
-            <a href="#" className="market-product-item box-shadow">
+            <div className="market-product-item box-shadow">
                 {/* item img */}
                 <div className="market-product-item_img">
                 <img src={`./img/${product.img}`} alt="" />
@@ -103,7 +103,7 @@ function CartItem({product}) {
                         </div>
                     </div>
                 </div>
-            </a>
+            </div>
         </Link>
     );
 }

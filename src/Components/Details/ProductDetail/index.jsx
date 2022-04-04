@@ -57,12 +57,9 @@ const calcPercentDiscount = (currentPrice,retailPriceice) => {
     return 100-Math.floor((currentPrice/retailPriceice)*100)
 }
 
-
-
-
-
 function ProductDetail(props) {
     let {_id} = props.match.params
+    
     const currentProduct = myData.product.find(product => product.ID === _id)
 
     const [totalQuantity,setTotalQuantity] = useState(0);
@@ -76,6 +73,12 @@ function ProductDetail(props) {
             setTotalQuantity(totalQuantity-1)
         }
     }
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+        console.log('scroll')
+        // console.log(props.location.pathname)
+    },[])
 
     return (
         <>
