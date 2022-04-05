@@ -1,5 +1,6 @@
 import './App.scss';
 import React, { useState, useEffect } from "react";
+
 import Header from './Components/Header'
 import HeaderMobile from './Components/HeaderMobile'
 import MainLeftSide from './Components/MainLeftSide'
@@ -23,16 +24,10 @@ function App() {
     setSectionIndex(index);
   }
 
+  // useEffect(() => {
+  //   console.log("check"+pathname)
+  // },[pathname])
 
-  useEffect(() => {
-    setPathname(window.location.pathname)
-    console.log(pathname)
-  },[window.location.pathname])
-
-
-  useEffect(() => {
-    console.log("check"+pathname)
-  })
   return (
     <Router>
      {/* <ScrollToTop/> */}

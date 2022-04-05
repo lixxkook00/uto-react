@@ -1,63 +1,10 @@
 import React from 'react';
 import './MMSCommunity.scss'
 
-
-const postList = [
-    {
-        idPost:0,
-        userAvt:'author-image.png',
-        userName:'Unie',
-        productName:'Mặt nạ trắng da, ngăn ngừa lão hóa, thải độc cho da',
-        productLink:'',
-        postTime:'Khoảng 3 tháng trước',
-        postContent:'Sắp đến Tết rồi, cùng làm đẹp thôi các nàng ơi Shop mình còn nhiều mặt hàng về làm đep lắm nè, ghé xem và rinh về các sản phẩm ưng ý nhé !!! https://uniehouse.uto.vn/',
-        postImg:'product-image.jpg',
-        likeQuantity:'10',
-        commentQuantity:'6',
-        shareQuantity:'1',
-    },
-    {
-        idPost:1,
-        userAvt:'author-image.png',
-        userName:'Lê Hoàng Anh',
-        productName:'Siro tỏi đen Chosun',
-        productLink:'',
-        postTime:'Khoảng 3 tháng trước',
-        postContent:'Khi bé ho hay sổ mũi là cha mẹ lo sốt vía, họ luôn thầm ước có sản phẩm nào đó cho con dùng mỗi ngày để phòng bệnh mà không có tác dụng phụ, hoặc khi bệnh có sản phẩm nào đó sử dụng an toàn, hiệu quả cho bé.',
-        postImg:'product-image (1).jpg',
-        likeQuantity:'8',
-        commentQuantity:'3',
-        shareQuantity:'0',
-    },
-    {
-        idPost:2,
-        userAvt:'author-image.png',
-        userName:'Nguyễn Hữu',
-        productName:'Giày nam siêu chất',
-        productLink:'',
-        postTime:'Khoảng 4 tháng trước',
-        postContent:'THÔNG TIN SẢN PHẨM: Mã sản phẩm: Dr608 Size: 39 - 44 Màu sắc: Cao thêm 5cm tính cả đế cả ngày năng động.',
-        postImg:'product-image (5).jpg',
-        likeQuantity:'3',
-        commentQuantity:'0',
-        shareQuantity:'0',
-    },
-    {
-        idPost:3,
-        userAvt:'author-image.png',
-        userName:'Nguyễn Hữu',
-        productName:'Nón kèm khẩu trang',
-        productLink:'',
-        postTime:'Khoảng 4 tháng trước',
-        postContent:'MLB. Nón kèm khẩu trang. Mua 1 mà đc 2 siêu lãi. Ưng ib ạ',
-        postImg:'product-image (3).jpg',
-        likeQuantity:'4',
-        commentQuantity:'1',
-        shareQuantity:'0',
-    },
-]
+import MyData from '../../../data/data.json'
 
 function MMSCommunity(props) {
+    const postList = MyData.postList;
     return (
         <div className="community">
 

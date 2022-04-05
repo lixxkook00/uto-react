@@ -1,4 +1,4 @@
-import React,{useEffect} from 'react';
+import React,{useEffect,useRef} from 'react';
 import './MainMiddleSide.scss'
 
 import {BrowserRouter as Router,Route,Switch} from 'react-router-dom';
@@ -15,46 +15,48 @@ import ScrollToTop from '../ScrollToTop'
 import Footer from '../Footer'
 
 
-function 
+function MainMiddleSide({indexSelected}) {
+    const myRef = useRef(null)
 
-MainMiddleSide({indexSelected}) {
-    useEffect(() => {
-        window.scrollTo(0, 0)
-    }, [])
+    useEffect(() =>{
+        myRef.current.scrollIntoView()  
+    })
 
     return (
         <div className="main-content">
-            {/* <ScrollToTop/> */}
-            <Switch>
-                <Route path="/community">
-                    < MMSCommunity/>
-                </Route>
-            </Switch>
-            <Switch>
-                <Route path="/tech">
-                    < MMSTech/>
-                </Route>
-            </Switch>
-            <Switch>
-                <Route path="/logistic">
-                    < MMSLogistic/>
-                </Route>
-            </Switch>
-            <Switch>
-                <Route path="/edu">
-                    < MMSEdu/>
-                </Route>
-            </Switch>
-            <Switch>
-                <Route exact path="/">
-                    < MMSMarket/>
-                </Route>
-            </Switch>
-            <Switch>
-                <Route path="/market/:_id" component={ProductDetail} />
-            </Switch>
+            <div className="all-content" ref={myRef}>
+                {/* <ScrollToTop/> */}
+                <Switch>
+                    <Route path="/community">
+                        < MMSCommunity/>
+                    </Route>
+                </Switch>
+                <Switch>
+                    <Route path="/tech">
+                        < MMSTech/>
+                    </Route>
+                </Switch>
+                <Switch>
+                    <Route path="/logistic">
+                        < MMSLogistic/>
+                    </Route>
+                </Switch>
+                <Switch>
+                    <Route path="/edu">
+                        < MMSEdu/>
+                    </Route>
+                </Switch>
+                <Switch>
+                    <Route exact path="/">
+                        < MMSMarket/>
+                    </Route>
+                </Switch>
+                <Switch>
+                    <Route path="/market/:_id" component={ProductDetail} />
+                </Switch>
 
-            <Footer/>
+                <Footer/>
+            </div>
         </div>
     );
 }

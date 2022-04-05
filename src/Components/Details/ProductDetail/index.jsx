@@ -1,9 +1,11 @@
-import React, {useState,useEffect} from 'react';
+import React, {useState,useEffect,useRef} from 'react';
 import './ProductDetail.scss'
 
 // rating MUI
 import Rating from '@mui/material/Rating';
 import Stack from '@mui/material/Stack';
+
+import CartMarket from '../../CartMarket'
 
 import myData from "../../../data/data.json"
 
@@ -58,31 +60,39 @@ const calcPercentDiscount = (currentPrice,retailPriceice) => {
 }
 
 function ProductDetail(props) {
+    // get ID product
     let {_id} = props.match.params
     
+    // get product infor
     const currentProduct = myData.product.find(product => product.ID === _id)
 
-    const [totalQuantity,setTotalQuantity] = useState(0);
+    console.log(currentProduct.startRating)
 
+    // handle quantity change
+    const [totalQuantity,setTotalQuantity] = useState(0);
     const increase = () => {
         setTotalQuantity(totalQuantity+1)
     }
-
     const decrease = () => {
         if(totalQuantity > 0){
             setTotalQuantity(totalQuantity-1)
         }
     }
 
-    useEffect(() => {
-        window.scrollTo(0, 0);
-        console.log('scroll')
-        // console.log(props.location.pathname)
+    // handle auto scroll to top
+    const myRef = useRef(null)
+    useEffect(() =>{
+        myRef.current.scrollIntoView()  
     },[])
 
+    useEffect(() => {
+        myRef.current.scrollIntoView()  
+        console.log(props.location.pathname)   
+    },[props.location.pathname])
+
     return (
-        <>
-            {/* infor product */}
+        <div className="all-content" ref={myRef}>
+             {/* infor product */}
             <div className="post">
                 <div className="product">
                     <div className="product-img">
@@ -100,7 +110,7 @@ function ProductDetail(props) {
                                     0
                                 </div>
                                 <Stack spacing={1}>
-                                    <Rating name="half-rating-read" defaultValue={currentProduct.startRating} precision={0.5} readOnly />
+                                    <Rating name="half-rating-read" defaultValue={currentProduct.startRating ? currentProduct.startRating : 1} precision={0.5} readOnly />
                                 </Stack>
                             </div>
                             <div className="product-infor-vote-item">
@@ -130,8 +140,8 @@ function ProductDetail(props) {
                                 Số lượng
                             </div>
                             <div className="product-infor-quantity-control">
-                                <div onClick={() => increase()} className=" control-btn control-increase">
-                                    <i className="fa-solid fa-plus"></i>
+                                 <div onClick={() => decrease()} className={`control-btn control-decrease ${totalQuantity===0 && "disable"}`}>
+                                    <i className="fa-solid fa-minus"></i>
                                 </div>
 
                                 <input 
@@ -142,9 +152,11 @@ function ProductDetail(props) {
                                     onChange={(e) => setTotalQuantity(parseInt(e.target.value))}
                                 />
 
-                                <div onClick={() => decrease()} className={`control-btn control-decrease ${totalQuantity===0 && "disable"}`}>
-                                    <i className="fa-solid fa-minus"></i>
+                                <div onClick={() => increase()} className=" control-btn control-increase">
+                                    <i className="fa-solid fa-plus"></i>
                                 </div>
+
+                               
                             </div>
                             <div className="product-infor-quantity-avaiable">
                                 {currentProduct.available}  sản phẩm có sẵn
@@ -193,7 +205,27 @@ function ProductDetail(props) {
                     </div>
                 </div>
             </div>
-        </>
+
+            {/* recommend list item */}
+            <div className="post">
+                {/* title */}
+                <div className="market-title market-title--blue">
+                    Mặt hàng mới
+                </div>
+                
+                <div className="container">
+                    <div className="row">
+                        {
+                            myData.product.map((product,index) => {
+                                return (
+                                    <CartMarket key={index} product={product}/>
+                                )
+                            })
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
     );
 }
 

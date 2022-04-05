@@ -98,8 +98,63 @@
             padding: 0 6px;
         }
     }
+
+    .market-product-item_img{
+        height: 300px !important;
+    }
     
+    // Product detail
+    .product-infor-name{
+        margin-bottom: 10px;
+    }
+
+    .product-infor-price-current{
+        font-size: 32px !important;
+    }
+
+    .product-infor-price-retail{
+        font-size: 18px;
+    }
+
+    .product-infor-price-percent{
+        font-size: 18px;
+    }
+
+    .shop-avt{
+        margin-top: 20px;
+        height: 58px !important;
+    }
+
+    .shop{
+        align-items: flex-start !important;
+    }
+    
+    .product-infor-button{
+        flex-direction: column;
+    }
+
+    .second-button{
+        justify-content: center;
+        margin: 10px 0 5px !important;
+    }
+
+    .primary-button{
+        margin: 10px 0 5px !important;
+    }
+    .product-infor{
+        border-top: 1px solid #ccc;
+        margin-top: 20px;
+    }
+
+    .product-infor-quantity{
+        flex-wrap: wrap;
+    }
+
+    .product-infor-quantity-control{
+        margin-bottom: 20px !important;
+    }
 }
+
 
 /* Mobile & Tablet */
 @media (max-width: 1023px) {
