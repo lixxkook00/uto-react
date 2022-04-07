@@ -8,7 +8,7 @@ import Rating from '@mui/material/Rating';
 import Stack from '@mui/material/Stack';
 
 const formatLessThan100 = (num) => {
-    let result = ""
+    let result = num
     if (num === 0) {
         result = "000";
     }
@@ -29,16 +29,15 @@ const formatPrice = (price) => {
 
         price = price - milion*1000000
         
-        if (price >= 1000) {
-            let front = Math.floor(price / 1000);
-            let back = price % 1000;
+        let front = Math.floor(price / 1000);
+        let back = price % 1000;
 
-            front = formatLessThan100(front)
-            back = formatLessThan100(back)
+        front = formatLessThan100(front)
+        back = formatLessThan100(back)
 
-            console.log(front)
-            return `${finalMilion}${front},${back}`;
-        }
+        // console.log(front, back)
+        
+        return `${finalMilion}${front},${back}`;
     }
 
     if (price >= 1000) {
@@ -82,12 +81,16 @@ function CartItem({product}) {
                     </div>
                     <div className="market-product-item_price-old">
                     <div className="num">
-                        {formatPrice(product.retailPrice)}
+                        {formatPrice(product.retailPrice) != 0 && formatPrice(product.retailPrice)}
                     </div>
-                    <span className="text-underline">đ</span>
-                    <div className="percent">
-                        -{calcPercentDiscount(product.currentPrice,product.retailPrice)}%
-                    </div> 
+                    <span className="text-underline">
+                          {formatPrice(product.retailPrice) != 0 && "đ" }
+                    </span>
+                    {
+                        formatPrice(product.retailPrice) != 0 && <div className="percent">
+                                                                    -{calcPercentDiscount(product.currentPrice,product.retailPrice)}%
+                                                                </div> 
+                    }   
                     </div>
                 </div>
 

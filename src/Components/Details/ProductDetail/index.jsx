@@ -10,7 +10,7 @@ import CartMarket from '../../Carts/CartMarket'
 import myData from "../../../data/data.json"
 
 const formatLessThan100 = (num) => {
-    let result = ""
+    let result = num
     if (num === 0) {
         result = "000";
     }
@@ -31,16 +31,15 @@ const formatPrice = (price) => {
 
         price = price - milion*1000000
         
-        if (price >= 1000) {
-            let front = Math.floor(price / 1000);
-            let back = price % 1000;
+        let front = Math.floor(price / 1000);
+        let back = price % 1000;
 
-            front = formatLessThan100(front)
-            back = formatLessThan100(back)
+        front = formatLessThan100(front)
+        back = formatLessThan100(back)
 
-            console.log(front)
-            return `${finalMilion}${front},${back}`;
-        }
+        // console.log(front, back)
+        
+        return `${finalMilion}${front},${back}`;
     }
 
     if (price >= 1000) {
@@ -66,7 +65,7 @@ function ProductDetail(props) {
     // get product infor
     const currentProduct = myData.product.find(product => product.ID === _id)
 
-    console.log(currentProduct.startRating)
+    // console.log(currentProduct.startRating)
 
     // handle quantity change
     const [totalQuantity,setTotalQuantity] = useState(0);
@@ -127,11 +126,15 @@ function ProductDetail(props) {
                             </div>
                             <div className="dflex">
                                 <div className="product-infor-price-retail">
-                                   {formatPrice(currentProduct.retailPrice)}
+                                   {currentProduct.retailPrice != 0 && formatPrice(currentProduct.retailPrice)}
                                 </div>
-                                <div className="product-infor-price-percent">
-                                    d -{calcPercentDiscount(currentProduct.currentPrice,currentProduct.retailPrice)}%
-                                </div>
+
+                                {
+                                    currentProduct.retailPrice != 0 && <div className="product-infor-price-percent">
+                                                                             -{calcPercentDiscount(currentProduct.currentPrice,currentProduct.retailPrice)}%
+                                                                        </div>
+                                }
+                                
                             </div>
                         </div>
                         {/* quantity */}
