@@ -1,5 +1,7 @@
+import { Link } from '@mui/material';
 import React from 'react';
 import './HeaderMobile.scss'
+
 
 function HeaderMobile(props) {
     return (
@@ -8,9 +10,9 @@ function HeaderMobile(props) {
         // </div>
 
         <div className="header-mobile hide-on-pc">
-            <div className="logo">
+            <a href="/" className="logo">
                 <img src="./img/uto logo image.png" alt="" />
-            </div>
+            </a>
             <div className="icon">
                 <i className="fas fa-bars"></i>
             </div>

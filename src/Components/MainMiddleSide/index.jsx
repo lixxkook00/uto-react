@@ -9,7 +9,7 @@ import MMSTech from '../MMS/MMSTech'
 import MMSEdu from '../MMS/MMSEdu'
 import MMSMarket from '../MMS/MMSMarket'
 import ProductDetail from '../Details/ProductDetail'
-import ScrollToTop from '../ScrollToTop'
+import ShopDetail from '../Details/ShopDetail';
 
 // Footer
 import Footer from '../Footer'
@@ -53,6 +53,10 @@ function MainMiddleSide({indexSelected}) {
                 </Switch>
                 <Switch>
                     <Route path="/market/:_id" component={ProductDetail} />
+                </Switch>
+
+                <Switch>
+                    <Route path="/shop/:_id" component={ShopDetail} />
                 </Switch>
 
                 <Footer/>

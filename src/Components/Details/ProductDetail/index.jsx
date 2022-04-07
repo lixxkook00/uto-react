@@ -5,7 +5,7 @@ import './ProductDetail.scss'
 import Rating from '@mui/material/Rating';
 import Stack from '@mui/material/Stack';
 
-import CartMarket from '../../CartMarket'
+import CartMarket from '../../Carts/CartMarket'
 
 import myData from "../../../data/data.json"
 
@@ -86,8 +86,8 @@ function ProductDetail(props) {
     },[])
 
     useEffect(() => {
-        myRef.current.scrollIntoView()  
-        console.log(props.location.pathname)   
+        myRef.current.scrollIntoView()
+        setTotalQuantity(0)
     },[props.location.pathname])
 
     return (
@@ -110,7 +110,7 @@ function ProductDetail(props) {
                                     0
                                 </div>
                                 <Stack spacing={1}>
-                                    <Rating name="half-rating-read" defaultValue={currentProduct.startRating ? currentProduct.startRating : 1} precision={0.5} readOnly />
+                                    <Rating name="half-rating-read" defaultValue={currentProduct.startRating ? currentProduct.startRating : 0} precision={0.5} readOnly />
                                 </Stack>
                             </div>
                             <div className="product-infor-vote-item">

@@ -15,7 +15,7 @@ import myData from '../../../data/data.json';
 import YoutubeEmbed from '../../YoutubeEmbed'
 
 // Cart Edu
-import CartEdu from '../../CartEdu'
+import CartEdu from '../../Carts/EduCart'
 
 function getId(url) {
     const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;

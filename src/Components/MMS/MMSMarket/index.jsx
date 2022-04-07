@@ -18,55 +18,11 @@ import { EffectFade, Navigation, Pagination,Autoplay } from "swiper";
 import myData from '../../../data/data.json';
 
 // cart item
-import CartMarket from '../../CartMarket'
+import CartMarket from '../../Carts/CartMarket'
 
-const sellers = [
-  {
-    href:'',
-    img:'shopmypham.png',
-    name:'Shop Mỹ Phẩm',
-  },
-  {
-    href:'',
-    img:'Siêu thị online 123sale.net.png',
-    name:'Siêu thị online 123sale',
-  },
-  {
-    href:'',
-    img:'Hàng Chính Hãng Xách Tay Made In The USA.png',
-    name:'Hàng Chính Hãng Xách Tay Made In The USA',
-  },
-  {
-    href:'',
-    img:'Uniehouse- Chuyên làm đẹp.png',
-    name:'Uniehouse - Chuyên làm đẹp',
-  },
-  {
-    href:'',
-    img:'VÂN LEE - Chuyên sỉ_ lẻ hàng đẹp_ chất_yythk.png',
-    name:'VÂN LEE',
-  },
-  {
-    href:'',
-    img:'Nhân Sâm Hàn Quốc.png',
-    name:'Nhân Sâm Hàn Quốc',
-  },
-  {
-    href:'',
-    img:'Cửa Hàng Máy Tính.png',
-    name:'Cửa Hàng Máy Tính',
-  },
-  {
-    href:'',
-    img:'shopmypham.png',
-    name:'Shop Mỹ Phẩm',
-  },
-  {
-    href:'',
-    img:'product-image.png',
-    name:'',
-  },
-]
+// cart seller 
+import CartSeller from '../../Carts/CartSeller'
+
 
 function MMSMarket(props) {
 
@@ -126,17 +82,10 @@ function MMSMarket(props) {
             className="mySwiper"
           >
             {
-              sellers.map((seller,index) => {
+              myData.sellers.map((seller,index) => {
                 return (
                   <SwiperSlide key={index}>
-                    <a href={seller.href} className="seller-slider-cart box-show-uto">
-                      <div className="seller-slider-cart_img">
-                        <img src={`./img/${seller.img}`} alt="" />
-                      </div>
-                      <div className="seller-slider-cart_title">
-                        {seller.name}
-                      </div>
-                    </a>
+                    <CartSeller seller={seller} />
                   </SwiperSlide>
                 );
               })

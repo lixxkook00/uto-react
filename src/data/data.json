@@ -219,5 +219,61 @@
             "commentQuantity":1,
             "shareQuantity":0
         }
+    ],
+    "sellers" : [
+        {
+            "ID":"shopmypham",
+            "href":"",
+            "img":"shopmypham.png",
+            "name":"Shop Mỹ Phẩm"
+        },
+        {
+            "ID":"123sale",
+            "href":"",
+            "img":"Siêu thị online 123sale.net.png",
+            "name":"Siêu thị online 123sale"
+        },
+        {
+            "ID":"xachtayusa",
+            "href":"",
+            "img":"Hàng Chính Hãng Xách Tay Made In The USA.png",
+            "name":"Hàng Chính Hãng Xách Tay Made In The USA"
+        },
+        {
+            "ID":"Uniehouse",
+            "href":"",
+            "img":"Uniehouse- Chuyên làm đẹp.png",
+            "name":"Uniehouse - Chuyên làm đẹp"
+        },
+        {
+            "ID":"vanlee",
+            "href":"",
+            "img":"VÂN LEE - Chuyên sỉ_ lẻ hàng đẹp_ chất_yythk.png",
+            "name":"VÂN LEE"
+        },
+        {
+            "ID":"nhansamhangquoc",
+            "href":"",
+            "img":"Nhân Sâm Hàn Quốc.png",
+            "name":"Nhân Sâm Hàn Quốc"
+        },
+        {
+            "ID":"cuahangmaytinh",
+            "href":"",
+            "img":"Cửa Hàng Máy Tính.png",
+            "name":"Cửa Hàng Máy Tính"
+        },
+        {
+            "ID":"shopmypham",
+            "href":"",
+            "img":"shopmypham.png",
+            "name":"Shop Mỹ Phẩm"
+        },
+        {
+            "ID":"",
+            "href":"",
+            "img":"product-image.png",
+            "name":""
+        }
     ]
 }
