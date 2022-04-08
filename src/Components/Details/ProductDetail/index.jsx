@@ -77,6 +77,15 @@ function ProductDetail(props) {
             setTotalQuantity(totalQuantity-1)
         }
     }
+    // handle input value
+    const handleInputValue = (num) => {
+        if(num ===''){
+            setTotalQuantity(0)
+        }else{
+            const intNum = parseInt(num)
+            setTotalQuantity(intNum)
+        }
+    } 
 
     // handle auto scroll to top
     const myRef = useRef(null)
@@ -130,9 +139,11 @@ function ProductDetail(props) {
                                 </div>
 
                                 {
-                                    currentProduct.retailPrice != 0 && <div className="product-infor-price-percent">
-                                                                             -{calcPercentDiscount(currentProduct.currentPrice,currentProduct.retailPrice)}%
-                                                                        </div>
+                                    currentProduct.retailPrice != 0 
+                                    && 
+                                    <div className="product-infor-price-percent">
+                                        -{calcPercentDiscount(currentProduct.currentPrice,currentProduct.retailPrice)}%
+                                    </div>
                                 }
                                 
                             </div>
@@ -152,7 +163,7 @@ function ProductDetail(props) {
                                     pattern="[0-9]*" 
                                     className="control-value" 
                                     value={totalQuantity} 
-                                    onChange={(e) => setTotalQuantity(parseInt(e.target.value))}
+                                    onChange={(e) => handleInputValue(e.target.value)}
                                 />
 
                                 <div onClick={() => increase()} className=" control-btn control-increase">

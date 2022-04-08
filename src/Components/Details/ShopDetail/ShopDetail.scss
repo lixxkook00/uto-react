@@ -34,6 +34,10 @@
         &-infor {
             width: 100%;
             padding-left: 164px;
+
+            &-name{
+                margin-top: 10px;
+            }
     
             // margin-bottom: 10px;
             &-id {
@@ -60,5 +64,11 @@
                 margin-right: 4px;
             }
         }
+    }
+
+    // style panigation
+    .css-1oj2twp-MuiPagination-root{
+        display: flex;
+        justify-content: center;
     }
 }

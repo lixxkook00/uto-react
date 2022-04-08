@@ -114,7 +114,7 @@ function LogisticRule(props) {
 
             {/* table */}
 
-            <table class="table table-striped">
+            <table className="table table-striped">
                 <tbody>
                 <tr>
                     <td valign="top">
