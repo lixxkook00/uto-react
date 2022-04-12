@@ -96,11 +96,15 @@ html {
   background-color: $primary-blue;
   color: #fff;
   border-radius: 8px;
+  transition: all 0.5s ease;
 }
 
 .primary-button:hover {
   opacity: 0.8;
+  background: #fff;
   cursor: pointer;
+  color: $primary-blue;
+  border: 1px solid $primary-blue;
 }
 
 .second-button {

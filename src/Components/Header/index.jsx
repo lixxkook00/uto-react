@@ -28,9 +28,9 @@ const mainContentList = [
         name:"Cộng đồng",
     },
     {
-        id:"tech",
-        icon:"fab fa-gg-circle",
-        name:"Sàn công nghệ",
+        id:"services",
+        icon:"fa-solid fa-puzzle-piece",
+        name:"Dịch vụ",
     },
     {
         id:"",

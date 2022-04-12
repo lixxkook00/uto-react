@@ -1,6 +1,9 @@
 import React, {useState,useEffect,useRef} from 'react';
 import './ProductDetail.scss'
 
+// link router
+import {Link} from 'react-router-dom'
+
 // rating MUI
 import Rating from '@mui/material/Rating';
 import Stack from '@mui/material/Stack';
@@ -213,9 +216,9 @@ function ProductDetail(props) {
                             <p>Địa chỉ </p>
                             <p>Khu Nam Viên, Khu Biệt Thự Phú Mỹ Hưng Thành phố Hồ Chí Minh</p>
                         </div>
-                        <div className="primary-button shop-btn">
+                        <Link to={`/shop/${currentProduct.shopID}`} className="primary-button shop-btn">
                             <i className="fa-solid fa-shop"></i> Xem Shop
-                        </div>
+                        </Link>
                     </div>
                 </div>
             </div>

@@ -5,7 +5,7 @@ import MyData from '../../../data/data.json'
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
 
-let firstList;
+let firstList = [];
 
 function ShopDetail(props) {
     let {_id} = props.match.params
@@ -17,13 +17,15 @@ function ShopDetail(props) {
         // console.log(firstList)
         // console.log("firstList",firstList)
     },[])
-
     // handle pagination
     const [currentProductList,setCurrentProductList] = useState([])
     const [currentPage,setCurrentPage] = useState(1)
 
-    // const pageNumber = (Math.floor(firstList.length/21))+1
+    const quantityPage = (Math.floor(firstList.length/21))+1
     // const co = firstList.length%2
+
+    console.log("quantityPage",quantityPage)  
+    // console.log("co",co)
 
     // handle next/prev button
     const handleNextPrevButton = (action) => {

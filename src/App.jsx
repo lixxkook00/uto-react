@@ -18,15 +18,15 @@ function App() {
   const [sectionIndex,setSectionIndex] = useState(2);
 
   // pathname
-  const [pathname,setPathname] = useState(window.location.pathname)
+  // const [pathname,setPathname] = useState(window.location.pathname)
 
   const handleSelectSection = (index) => {
     setSectionIndex(index);
   }
 
-  // useEffect(() => {
-  //   console.log("check"+pathname)
-  // },[pathname])
+  useEffect(() => {
+    document.title = titleList[sectionIndex]
+  },[sectionIndex])
 
   return (
     <Router>
@@ -39,7 +39,7 @@ function App() {
         <HeaderMobile />
         <div className="container-uto mt-10">
           <MainLeftSide/>
-          <MainMiddleSide indexSelected={sectionIndex}/>
+          <MainMiddleSide/>
           <MainRightSide/>
         </div>
       </div>

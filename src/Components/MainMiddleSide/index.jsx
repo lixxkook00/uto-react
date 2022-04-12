@@ -5,7 +5,7 @@ import {BrowserRouter as Router,Route,Switch} from 'react-router-dom';
 
 import MMSCommunity from '../MMS/MMSCommunity'
 import MMSLogistic from '../MMS/MMSLogistic'
-import MMSTech from '../MMS/MMSTech'
+import MMSServices from '../MMS/MMSServices'
 import MMSEdu from '../MMS/MMSEdu'
 import MMSMarket from '../MMS/MMSMarket'
 import ProductDetail from '../Details/ProductDetail'
@@ -15,7 +15,7 @@ import ShopDetail from '../Details/ShopDetail';
 import Footer from '../Footer'
 
 
-function MainMiddleSide({indexSelected}) {
+function MainMiddleSide() {
     const myRef = useRef(null)
 
     useEffect(() =>{
@@ -32,8 +32,8 @@ function MainMiddleSide({indexSelected}) {
                     </Route>
                 </Switch>
                 <Switch>
-                    <Route path="/tech">
-                        < MMSTech/>
+                    <Route path="/services">
+                        < MMSServices/>
                     </Route>
                 </Switch>
                 <Switch>
