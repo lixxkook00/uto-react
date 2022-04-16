@@ -124,6 +124,28 @@ html {
   cursor: pointer;
 }
 
+.primary-title{
+  position: relative;
+  color: $primary-blue;
+  font-weight: 500;
+  font-size: 20px;
+  margin-left: 20px;
+  margin-bottom: 8px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.primary-title::before{
+  content: " ";
+  position: absolute;
+  left: -15px;
+  display: block;
+  width: 4px;
+  background-color: $primary-blue;
+  height: 100%;
+}
+
 /* utils */
 
 a {

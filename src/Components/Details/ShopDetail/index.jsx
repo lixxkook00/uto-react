@@ -6,26 +6,31 @@ import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
 
 let firstList = [];
+let quantityProductPerPage = 21;
 
 function ShopDetail(props) {
-    let {_id} = props.match.params
-    
 
+    let {_id} = props.match.params
+
+    
     // get first product list
     useEffect(() => {
         firstList =  MyData.product.filter((product) => product.shopID === _id)
-        // console.log(firstList)
-        // console.log("firstList",firstList)
     },[])
+    
+    // get quantity page
+    const pageNum = (firstList.length%quantityProductPerPage) > 0 
+                    ? Math.floor(firstList.length/quantityProductPerPage) +1 
+                    : Math.floor(firstList.length/quantityProductPerPage)
+
     // handle pagination
     const [currentProductList,setCurrentProductList] = useState([])
     const [currentPage,setCurrentPage] = useState(1)
 
-    const quantityPage = (Math.floor(firstList.length/21))+1
+    const quantityPage = (Math.floor(firstList.length/quantityProductPerPage))+1
+
     // const co = firstList.length%2
 
-    console.log("quantityPage",quantityPage)  
-    // console.log("co",co)
 
     // handle next/prev button
     const handleNextPrevButton = (action) => {
@@ -44,9 +49,12 @@ function ShopDetail(props) {
     useEffect(() => {
         const currentProductListTemp = [...firstList]
         // get index of current page
-        const firstProductIndex = (currentPage-1)*21;
-        const lastProductIndex = (currentPage*21) >= (currentProductListTemp.length) ? currentProductListTemp.length : (currentPage*21)
+        const firstProductIndex = (currentPage-1)*quantityProductPerPage;
+        const lastProductIndex = (currentPage*quantityProductPerPage) >= (currentProductListTemp.length) 
+                                ? currentProductListTemp.length 
+                                : (currentPage*quantityProductPerPage)
 
+        
         // create new product list
         const newProductList = currentProductListTemp.slice(firstProductIndex,lastProductIndex)
 
@@ -89,23 +97,11 @@ function ShopDetail(props) {
 
             {/* all product this shop */}
             <div className="post">
-
-                {/* pagination */}
-                <Stack spacing={2} className="col-xl-12">
-                    <Pagination 
-                        onChange={(e) => {
-                            setCurrentPage(parseInt(e.target.innerText))
-                            handleNextPrevButton(e.currentTarget.getAttribute("aria-label"))
-                        }}
-                        count={2} 
-                        color="primary" 
-                    />
-                </Stack>
-
                 {/* title */}
                 <div className="market-title market-title--blue">
                     tất cả sản phẩm
                 </div>
+
                 {/* product list */}
                 <div className="container">
                     <div className="row">
@@ -119,6 +115,18 @@ function ShopDetail(props) {
                         }
                     </div>
                 </div>
+
+                {/* pagination */}
+                <Stack spacing={2} className="col-xl-12">
+                    <Pagination 
+                        onChange={(e) => {
+                            setCurrentPage(parseInt(e.target.innerText))
+                            handleNextPrevButton(e.currentTarget.getAttribute("aria-label"))
+                        }}
+                        count={pageNum} 
+                        color="primary" 
+                    />
+                </Stack>
             </div>
         </div>
     );

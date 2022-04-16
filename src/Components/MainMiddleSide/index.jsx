@@ -1,7 +1,7 @@
 import React,{useEffect,useRef} from 'react';
 import './MainMiddleSide.scss'
 
-import {BrowserRouter as Router,Route,Switch} from 'react-router-dom';
+import {BrowserRouter as Route,Switch} from 'react-router-dom';
 
 import MMSCommunity from '../MMS/MMSCommunity'
 import MMSLogistic from '../MMS/MMSLogistic'
