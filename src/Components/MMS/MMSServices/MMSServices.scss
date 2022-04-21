@@ -1,0 +1,40 @@
+@import "../../../../public/scss/variables";
+
+
+.services-cart{
+    display: block;
+    position: relative;
+    height: 170px;
+    
+    &-img{
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        overflow: hidden;
+        box-shadow : $primary-boxshadow;
+
+        img{
+            width: 100%;
+        }
+    }
+
+    &-name{
+        z-index: 1;
+        border-radius: 12px;
+        padding: 9px 12px;
+        box-shadow : $primary-boxshadow;
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+    }
+    &-icon{
+        margin: 0 8px;
+    }
+    &-text{
+        font-size: 16px;
+        font-weight: 500;
+        color: $primary-blue;
+    }
+}
